@@ -15,6 +15,8 @@ import Day from "assets/day.svg";
 import Night from "assets/night.svg";
 import { Button } from 'Component/Button';
 import ETH from "assets/Ethereum (ETH).svg";
+import Add from "assets/add.svg";
+import Arrow from "assets/arrow-right.svg";
 
 
 import { NavLink } from "react-router-dom";
