@@ -4,11 +4,19 @@ import SideBar from "Component/SideBar";
 import SideShow from "Component/SlideShow";
 // import SideBar from "Component/SideBar";
 // import {SideBar} from "components/SideBar"
+import Michael from "assets/jordan.svg";
+import Tibao from "assets/tibao.svg";
+import Teressa from "assets/teressa.svg";
+import Hawn from "assets/hawn.svg";
+import Alisson from "assets/alisson.svg";
+import Erricson from "assets/erricson.svg";
+
+
 
 
 const LayoutStyled = styled.div`
  background: #caeae6;
-  min-height: 1200vh;
+  min-height: 200vh;
   .right {
     float: right;
     width: 80%;
@@ -28,32 +36,85 @@ const LayoutStyled = styled.div`
     margin-right:50px;
     flex-direction: column;
   }
+  li{
+    list-style: decimal;
+  }
   .top-creator{
-    //display: flex;
-    justify-content:space-around;
     background-color: white;
     width: 348px;
     height: 478px;
-    margin-left:70px;
+    margin-top:50px;
+    margin-left:30px;
+    border-radius:20px;
     .title{
-width: 137px;
-height: 31px;
-
-
+      display: flex;
+      justify-content: space-around;
+    }
+    .title h2{
 font-family: 'DM Sans';
 font-style: normal;
 font-weight: 700;
 font-size: 24px;
 line-height: 31px;
 font-feature-settings: 'salt' on;
+color: #27262E;
+    }
+ 
+  
+  }
+  .item{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+  }
+  .name{
+  font-family: 'DM Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 21px;
+/* identical to box height */
+
+font-feature-settings: 'salt' on;
 
 /* Text/color1 */
 
 color: #27262E;
 
-    }
-  
   }
+  .id{
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+font-feature-settings: 'salt' on;
+
+/* Text/color2 */
+
+color: #747475;
+
+
+
+
+  }
+.btn-follow{
+  border-radius:20px;
+  background: rgba(84, 41, 255, 0.1);
+  width: 77px;
+  height: 32px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #5429FF;
+
+
+  }
+  
 
 `;
 
@@ -66,27 +127,34 @@ background: #caeae6;
   margin-top: 64px;
    height: 50vh; 
 `;
-const fakeData=[
-  {number:"1",id:"@jordan_",name:"Michael Jordan",avatar:"avatar"},
-  {number:"2",id:"@jordan_",name:"Michael Jordan",avatar:"avatar"}
+const fakeData = [
+  {  id: "@jordan_", name: "Michael Jordan", avatar: Michael },
+  { id: "@johnti60", name: "John Tibao", avatar: Tibao },
+  { id: "@teressa", name: "Teressa", avatar: Teressa },
+  { id: "@j_hawn", name: "Johan Hawn", avatar: Hawn },
+  { id: "@m_alisson", name: "Maria Alisson", avatar: Alisson},
+  { id: "@erricsonsam", name: "Sam Erricson", avatar: Erricson }
 ]
 const listPerson = fakeData.map((d) => <li key={d.number}>
-<div>
- 
-  <div>
-  {d.number}
-  {d.avatar}
-  <div>
-    {d.name}</div>
-  <div>
-    {d.id}
-  </div>
-  </div>
- 
-</div>
+  <div className="item">
+    <img src={d.avatar}alt="avatar" />
+    <div className="name-id">
+      <div className="name">
+        {d.name}
+      </div>
+      <div className="id">
+        {d.id}
+      </div>
+
+    </div>
+    <div>
+    <button className="btn-follow">Follow</button>
+    </div>
   
-  
-  </li>);
+  </div>
+
+
+</li>);
 
 const PrimaryLayout = ({ children }) => {
   return (
@@ -104,16 +172,18 @@ const PrimaryLayout = ({ children }) => {
           <div className="content-right">
             <ContentStyled>{children}</ContentStyled>
             <div className="top-creator">
-              <div></div>
-              <p className="title">Top Creator</p>
-              <p>see more</p>
+              <div className="title">
+                <h2>Top Creator</h2>
+                <p>see more</p>
+              </div>
+
               <div >
                 {listPerson}
               </div>
-             
-         
+
+
             </div>
-          
+
           </div>
         </div>
 

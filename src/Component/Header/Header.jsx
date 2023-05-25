@@ -4,7 +4,6 @@ import Avatar from "assets/avatar.svg";
 import Noti from "assets/noti-icon.svg";
 
 const HeaderStyled = styled.div`
-  position: fixed;
   z-index: 99;
   width: 100%;
   height: 56px;

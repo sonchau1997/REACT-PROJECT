@@ -1,9 +1,27 @@
 import { Card } from "Component/Card"
-import "./Home.css"
 import { styled } from "styled-components";
 const AppWrapper = styled.div`
   text-align: center;
-`;
+  
+.App-header {
+    display: flex;
+    flex-direction: row;
+    
+       align-items: flex-start;
+    /* justify-content: flex-end; */
+    justify-content: right;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  .Card-container{
+    display: grid;
+    grid-template-columns: auto auto ;
+    gap:50px;
+    padding: 10px;
+  }
+  
+`
+;
 const fakeData = [
   {
     title: "Revenue",

@@ -24,7 +24,6 @@ import { NavLink } from "react-router-dom";
 
 const SideBarStyled = styled.div`
   background-color: #ffffff ;
-  height: 100vh;
   padding: 32px;
  
   .logo {
