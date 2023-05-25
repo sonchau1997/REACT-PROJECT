@@ -13,7 +13,7 @@ import Settings from "assets/setting.svg";
 import LightMode from "assets/lightMode.svg";
 import Day from "assets/day.svg";
 import Night from "assets/night.svg";
-import { Button } from 'Component/Button';
+//import { Button } from 'Component/Button';
 import ETH from "assets/Ethereum (ETH).svg";
 import Add from "assets/add.svg";
 import Arrow from "assets/arrow-right.svg";
@@ -100,7 +100,20 @@ color: #E0DEE6;
 
     color: #27262E;
 
-  }`
+  }
+  .btn-add{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 14px 16px;
+width: 196px;
+height: 49px;
+
+background: #FFFFFF;
+border-radius: 12px;
+  }
+  `
 const StyledNavItem = styled.div`
   display: flex;
   align-items: center;
@@ -140,7 +153,11 @@ export const CardSideBarItem = () => {
 
     </div>
 
-    <Button boderColor="#E9E9E9">Top Up Balance</Button>
+    {/* <Button boderColor="#E9E9E9">Top Up Balance</Button> */}
+    <div >
+      <button className="btn-add"><img src={Add} alt="add" /> Top Up Balance <img src={Arrow} alt="arrow" /></button>
+    </div>
+
   </StyledCard>
 }
 
