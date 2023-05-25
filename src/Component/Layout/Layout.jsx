@@ -14,13 +14,16 @@ const LayoutStyled = styled.div`
   }
   .content{
     display: flex;
+    margin-top:40px;
   
   }
   .content-left{
     width: 60%;
+    
   }
   .content-right{
     width: 40%;
+    margin-right:50px;
   }
   .sideShow{
   

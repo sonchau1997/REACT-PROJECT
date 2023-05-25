@@ -9,25 +9,26 @@ const HeaderStyled = styled.div`
   width: 100%;
   height: 56px;
   display: flex;
-  justify-content: space-between ;
+  justify-content: space-between;
   background-color: #caeae6 ;
+  align-items: center;
+  text-align: center;
+  margin-left: 50px;
+  margin-top:30px;
   .input-with-icon{
     display: flex;
-    margin-left: 32px;
-    margin-top: 32px;
     text-align: center;
-    width:300px;
-    height: 30px;
+    width:461px;
+    height: 56px;
     background: #FFFFFF;
     border-radius: 35px;
     align-items: center;
-  
 
   }
   .input-search{
     margin-left:20px;
     width:90%;
-    height: 25px;
+    height: 50px;
     background: #FFFFFF;
     border-radius: 35px;
     outline: none;
@@ -35,9 +36,9 @@ const HeaderStyled = styled.div`
     
   }
   .search-icon{
-  width:15px;
-  height: 15px;
-  margin-left:5px;
+  width:30px;
+  height: 30px;
+  margin-left:10px;
  
   
 
@@ -55,6 +56,7 @@ const HeaderStyled = styled.div`
     display: flex;
     gap: 24px;
     width:30%;
+    margin-right:50px;
   
   }
 
