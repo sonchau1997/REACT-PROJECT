@@ -54,7 +54,8 @@ const HeaderStyled = styled.div`
   .user-info {
     display: flex;
     gap: 24px;
-    width: 30%;
+    width:30%;
+  
   }
 
 `;
