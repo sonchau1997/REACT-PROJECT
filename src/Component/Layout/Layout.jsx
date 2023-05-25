@@ -10,6 +10,10 @@ import Teressa from "assets/teressa.svg";
 import Hawn from "assets/hawn.svg";
 import Alisson from "assets/alisson.svg";
 import Erricson from "assets/erricson.svg";
+import { CardVideo } from "Component/CardVideo";
+import ApeInLove from "assets/apeinlove.svg";
+
+
 
 
 
@@ -28,6 +32,8 @@ const LayoutStyled = styled.div`
   }
   .content-left{
     width: 60%;
+    display: flex;
+    flex-direction: column;
     
   }
   .content-right{
@@ -114,6 +120,16 @@ color: #747475;
 
 
   }
+  .title-trending{
+    display: flex;
+    justify-content: space-around;
+    justify-items:center;
+   
+  }
+  .category{
+ 
+   
+  }
   
 
 `;
@@ -128,16 +144,16 @@ background: #caeae6;
    height: 50vh; 
 `;
 const fakeData = [
-  {  id: "@jordan_", name: "Michael Jordan", avatar: Michael },
+  { id: "@jordan_", name: "Michael Jordan", avatar: Michael },
   { id: "@johnti60", name: "John Tibao", avatar: Tibao },
   { id: "@teressa", name: "Teressa", avatar: Teressa },
   { id: "@j_hawn", name: "Johan Hawn", avatar: Hawn },
-  { id: "@m_alisson", name: "Maria Alisson", avatar: Alisson},
+  { id: "@m_alisson", name: "Maria Alisson", avatar: Alisson },
   { id: "@erricsonsam", name: "Sam Erricson", avatar: Erricson }
 ]
 const listPerson = fakeData.map((d) => <li key={d.number}>
   <div className="item">
-    <img src={d.avatar}alt="avatar" />
+    <img src={d.avatar} alt="avatar" />
     <div className="name-id">
       <div className="name">
         {d.name}
@@ -148,13 +164,16 @@ const listPerson = fakeData.map((d) => <li key={d.number}>
 
     </div>
     <div>
-    <button className="btn-follow">Follow</button>
+      <button className="btn-follow">Follow</button>
     </div>
-  
+
   </div>
 
 
 </li>);
+
+
+
 
 const PrimaryLayout = ({ children }) => {
   return (
@@ -168,7 +187,24 @@ const PrimaryLayout = ({ children }) => {
         <div className="content">
           <div className="content-left">
             <SideShow className="sideShow"></SideShow>
+            <div className="title-trending">
+              <h2>Trending Auctions</h2>
+
+              <p>Art</p>
+              <p>Music</p>
+              <p>Collectibles</p>
+              <p>Utility</p>
+            </div>
+            <CardVideo title={"Ape In Love"} avatarAuthor={Tibao}video={ApeInLove}idAuthor={"@johnti60"}likes={"21.5k"}></CardVideo>
+            <CardVideo title={"Ape In Love"} avatarAuthor={Tibao}video={ApeInLove}idAuthor={"@johnti60"}likes={"21.5k"}></CardVideo>
+          
+          
+          
+            
+
+
           </div>
+     
           <div className="content-right">
             <ContentStyled>{children}</ContentStyled>
             <div className="top-creator">
