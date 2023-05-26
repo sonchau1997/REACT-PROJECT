@@ -10,7 +10,7 @@ import Tibao from "assets/tibao.svg";
 import Alisson from "assets/alisson.svg";
 const LayoutStyled = styled.div`
  background: #caeae6;
-  min-height: 200vh;
+  min-height: 180vh;
   .right {
     float: right;
     width: 80%;

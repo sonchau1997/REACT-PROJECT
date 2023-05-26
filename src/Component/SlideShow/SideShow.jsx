@@ -5,10 +5,11 @@ import { styled } from 'styled-components';
 const SlideStyle = styled.div`
   margin-left:50px;
   margin-top:75px;
+  .style-img{
+   border-radius:20px;
+  }
     
 `
-
-
 
 const divStyle = {
     display: 'flex',
@@ -39,7 +40,7 @@ const Slideshow = () => {
                 <Slide>
                     {slideImages.map((slideImage, index) => (
                         <div key={index}>
-                            <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
+                            <div className='style-img' style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
                             </div>
                         </div>
                     ))}
