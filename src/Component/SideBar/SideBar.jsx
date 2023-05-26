@@ -15,6 +15,7 @@ import Day from "assets/day.svg";
 import Night from "assets/night.svg";
 //import { Button } from 'Component/Button';
 import ETH from "assets/Ethereum (ETH).svg";
+import ETH1 from "assets/Ethereum (ETH) (1).svg";
 import Add from "assets/add.svg";
 import Arrow from "assets/arrow-right.svg";
 
@@ -52,6 +53,8 @@ const SideBarStyled = styled.div`
  
 `;
 const StyledCard = styled.div`
+width: 228px;
+height: 220px;
 display: flex;
 flex-direction:column;
 justify-content: center;
@@ -113,6 +116,13 @@ height: 49px;
 background: #FFFFFF;
 border-radius: 12px;
   }
+  .eth{
+position: absolute;
+width: 92.74px;
+height: 151.02px;
+left: 80px;
+opacity: 0.24;
+  }
   `
 const StyledNavItem = styled.div`
   display: flex;
@@ -138,6 +148,9 @@ const NavItem = ({ text, path, img }) => {
 }
 export const CardSideBarItem = () => {
   return <StyledCard >
+    <div className="eth"> <img  src={ETH1} alt="eth" /></div>
+   
+    
     <div className='title'>
       Your Balance
     </div>

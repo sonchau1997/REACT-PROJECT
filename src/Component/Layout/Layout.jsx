@@ -2,24 +2,12 @@ import Header from "Component/Header";
 import styled from "styled-components";
 import SideBar from "Component/SideBar";
 import SideShow from "Component/SlideShow";
-// import SideBar from "Component/SideBar";
-// import {SideBar} from "components/SideBar"
-import Michael from "assets/jordan.svg";
-import Tibao from "assets/tibao.svg";
-import Teressa from "assets/teressa.svg";
-import Hawn from "assets/hawn.svg";
-import Alisson from "assets/alisson.svg";
-import Erricson from "assets/erricson.svg";
 import { CardVideo } from "Component/CardVideo";
 import ApeInLove from "assets/apeinlove.svg";
 import SmillingApe from "assets/smilleape.svg";
-
-
-
-
-
-
-
+import { TopCreator } from "Component/TopCreator";
+import Tibao from "assets/tibao.svg";
+import Alisson from "assets/alisson.svg";
 const LayoutStyled = styled.div`
  background: #caeae6;
   min-height: 200vh;
@@ -79,32 +67,24 @@ font-feature-settings: 'salt' on;
 color: #27262E;
     }
  
-  
+
   }
   .item{
     display: flex;
     justify-content:space-around;
     align-items: center;
-
-
   }
-
   .name-id{
    width: 30%;
   }
   .name{
-    @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22");
-  font-family: 'DM Sans';
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22");
+font-family: 'DM Sans';
 font-style: normal;
 font-weight: 700;
 font-size: 16px;
 line-height: 21px;
-/* identical to box height */
-
 font-feature-settings: 'salt' on;
-
-/* Text/color1 */
-
 color: #27262E;
 
   }
@@ -114,17 +94,8 @@ font-style: normal;
 font-weight: 400;
 font-size: 12px;
 line-height: 16px;
-/* identical to box height */
-
 font-feature-settings: 'salt' on;
-
-/* Text/color2 */
-
 color: #747475;
-
-
-
-
   }
 .btn-follow{
   @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22");
@@ -153,8 +124,17 @@ color: #747475;
     display: flex;
     flex-direction: row;
     gap:20px;
- 
-   
+    align-items: center;
+  }
+  .category p{
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22");
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+color: #7A797D;
+
   }
 .art{
 display: flex;
@@ -167,7 +147,6 @@ color: #5429FF;
 background: rgba(84, 41, 255, 0.1);
 border-radius: 30px;
 
-
   }
   .card_container{
     display: grid;
@@ -175,11 +154,8 @@ border-radius: 30px;
     gap:10px;
     padding:10px;
   }
- 
-
   
 `;
-
 const SideBarStyled = styled.div`
   float: left;
   width: 20%;
@@ -189,42 +165,6 @@ background: #caeae6;
   margin-top: 64px;
    height: 50vh; 
 `;
-const fakeData = [
-  { id: "@jordan_", name: "Michael Jordan", avatar: Michael },
-  { id: "@johnti60", name: "John Tibao", avatar: Tibao },
-  { id: "@teressa", name: "Teressa", avatar: Teressa },
-  { id: "@j_hawn", name: "Johan Hawn", avatar: Hawn },
-  { id: "@m_alisson", name: "Maria Alisson", avatar: Alisson },
-  { id: "@erricsonsam", name: "Sam Erricson", avatar: Erricson }
-
-]
-const listPerson = fakeData.map((d, index) => <li key={d.number}>
-
-
-  <div className="item">
-    <div>{index + 1}.</div>
-    <img src={d.avatar} alt="avatar" />
-
-    <div className="name-id">
-      <div className="name">
-        {d.name}
-      </div>
-      <div className="id">
-        {d.id}
-      </div>
-
-    </div>
-    <div>
-      <button className="btn-follow">Follow</button>
-    </div>
-
-  </div>
-
-
-</li>);
-
-
-
 
 const PrimaryLayout = ({ children }) => {
   return (
@@ -246,21 +186,14 @@ const PrimaryLayout = ({ children }) => {
                 <p>Collectibles</p>
                 <p>Utility</p>
               </div>
-
-
             </div>
             <div className="card_container">
-            <CardVideo title={"Ape In Love"} avatarAuthor={Tibao} video={ApeInLove} idAuthor={"@johnti60"} likes={"21.5k"}currentBid={"9.10"}></CardVideo>
-            <CardVideo title={"Smilling Ape"} avatarAuthor={Alisson} video={SmillingApe} idAuthor={"@m_alisson"} likes={"21.5k"} currentBid={"6.12"}></CardVideo>
-            <CardVideo title={"Ape In Love"} avatarAuthor={Tibao} video={ApeInLove} idAuthor={"@johnti60"} likes={"21.5k"}currentBid={"9.10"}></CardVideo>
-            <CardVideo title={"Smilling Ape"} avatarAuthor={Alisson} video={SmillingApe} idAuthor={"@m_alisson"} likes={"21.5k"} currentBid={"6.12"}></CardVideo>
+              <CardVideo title={"Ape In Love"} avatarAuthor={Tibao} video={ApeInLove} idAuthor={"@johnti60"} likes={"21.5k"} currentBid={"9.10"}></CardVideo>
+              <CardVideo title={"Smilling Ape"} avatarAuthor={Alisson} video={SmillingApe} idAuthor={"@m_alisson"} likes={"21.5k"} currentBid={"6.12"}></CardVideo>
+              <CardVideo title={"Ape In Love"} avatarAuthor={Tibao} video={ApeInLove} idAuthor={"@johnti60"} likes={"21.5k"} currentBid={"9.10"}></CardVideo>
+              <CardVideo title={"Smilling Ape"} avatarAuthor={Alisson} video={SmillingApe} idAuthor={"@m_alisson"} likes={"21.5k"} currentBid={"6.12"}></CardVideo>
             </div>
-
-
-
-
           </div>
-
           <div className="content-right">
             <ContentStyled>{children}</ContentStyled>
             <div className="top-creator">
@@ -268,24 +201,11 @@ const PrimaryLayout = ({ children }) => {
                 <h2>Top Creator</h2>
                 <p>see All</p>
               </div>
-          
-
-              <ul className="listItem" >
-                {listPerson}
-              </ul>
-
-            
-
-              
-
-
+              <TopCreator></TopCreator>
             </div>
 
           </div>
         </div>
-
-
-
       </div>
     </LayoutStyled>
   );
