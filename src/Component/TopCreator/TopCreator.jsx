@@ -6,7 +6,7 @@ import Alisson from "assets/alisson.svg";
 import Erricson from "assets/erricson.svg";
 import { styled } from "styled-components";
  const StyleTopCreator=styled.div`
- 
+
  `
 
 const fakeData = [
