@@ -142,8 +142,9 @@ color: #747475;
   }
   .title-trending{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    margin-left:10px;
    
   }
   .category{
@@ -165,6 +166,12 @@ background: rgba(84, 41, 255, 0.1);
 border-radius: 30px;
 
 
+  }
+  .card_container{
+    display: grid;
+    grid-template-columns: auto auto ;
+    gap:10px;
+    padding: 10px;
   }
  
 
@@ -240,10 +247,12 @@ const PrimaryLayout = ({ children }) => {
 
 
             </div>
+            <div className="card_container">
             <CardVideo title={"Ape In Love"} avatarAuthor={Tibao} video={ApeInLove} idAuthor={"@johnti60"} likes={"21.5k"}currentBid={"9.10"}></CardVideo>
             <CardVideo title={"Smilling Ape"} avatarAuthor={Alisson} video={SmillingApe} idAuthor={"@m_alisson"} likes={"21.5k"} currentBid={"6.12"}></CardVideo>
-
-
+            <CardVideo title={"Ape In Love"} avatarAuthor={Tibao} video={ApeInLove} idAuthor={"@johnti60"} likes={"21.5k"}currentBid={"9.10"}></CardVideo>
+            <CardVideo title={"Smilling Ape"} avatarAuthor={Alisson} video={SmillingApe} idAuthor={"@m_alisson"} likes={"21.5k"} currentBid={"6.12"}></CardVideo>
+            </div>
 
 
 
