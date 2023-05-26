@@ -50,7 +50,7 @@ const LayoutStyled = styled.div`
     background-color: white;
     width: 400px;
     height: 500px;
-    margin-left:75px;
+    margin-left:155px;
     border-radius:20px;
     .title{
       display: flex;
@@ -58,14 +58,14 @@ const LayoutStyled = styled.div`
      align-items: center; 
     }
     .title h2{
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22");
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 31px;
-font-feature-settings: 'salt' on;
-color: #27262E;
+     @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22");
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    font-feature-settings: 'salt' on;
+    color: #27262E;
     }
  
 

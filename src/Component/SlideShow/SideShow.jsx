@@ -3,7 +3,7 @@ import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import { styled } from 'styled-components';
 const SlideStyle = styled.div`
-  margin-left:50px;
+  margin-left:10px;
   margin-top:75px;
   .style-img{
    border-radius:20px;
