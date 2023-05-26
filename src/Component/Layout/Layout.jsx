@@ -8,6 +8,7 @@ import SmillingApe from "assets/smilleape.svg";
 import { TopCreator } from "Component/TopCreator";
 import Tibao from "assets/tibao.svg";
 import Alisson from "assets/alisson.svg";
+import { Trending } from "Component/Trending";
 const LayoutStyled = styled.div`
  background: #caeae6;
   min-height: 180vh;
@@ -113,41 +114,7 @@ color: #747475;
 
 
   }
-  .title-trending{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left:10px;
-   
-  }
-  .category{
-    display: flex;
-    flex-direction: row;
-    gap:20px;
-    align-items: center;
-  }
-  .category p{
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22");
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-color: #7A797D;
-
-  }
-.art{
-display: flex;
-justify-content: center;
-align-items: center;
-width: 45px;
-height: 28px;
-text-align: center;
-color: #5429FF;
-background: rgba(84, 41, 255, 0.1);
-border-radius: 30px;
-
-  }
+  
   .card_container{
     display: grid;
     grid-template-columns: auto auto ;
@@ -172,21 +139,13 @@ const PrimaryLayout = ({ children }) => {
       <SideBarStyled >
         <SideBar></SideBar>
       </SideBarStyled>
-
+  
       <div className="right">
         <Header />
         <div className="content">
           <div className="content-left">
             <SideShow className="sideShow"></SideShow>
-            <div className="title-trending">
-              <h2>Trending Auctions</h2>
-              <div className="category">
-                <p className="art">Art</p>
-                <p>Music</p>
-                <p>Collectibles</p>
-                <p>Utility</p>
-              </div>
-            </div>
+            <Trending></Trending>
             <div className="card_container">
               <CardVideo title={"Ape In Love"} avatarAuthor={Tibao} video={ApeInLove} idAuthor={"@johnti60"} likes={"21.5k"} currentBid={"9.10"}></CardVideo>
               <CardVideo title={"Smilling Ape"} avatarAuthor={Alisson} video={SmillingApe} idAuthor={"@m_alisson"} likes={"21.5k"} currentBid={"6.12"}></CardVideo>
