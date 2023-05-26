@@ -4,6 +4,11 @@ import Teressa from "assets/teressa.svg";
 import Hawn from "assets/hawn.svg";
 import Alisson from "assets/alisson.svg";
 import Erricson from "assets/erricson.svg";
+import { styled } from "styled-components";
+ const StyleTopCreator=styled.div`
+ 
+ `
+
 const fakeData = [
     { id: "@jordan_", name: "Michael Jordan", avatar: Michael },
     { id: "@johnti60", name: "John Tibao", avatar: Tibao },
@@ -40,9 +45,12 @@ const fakeData = [
 </li>);
 const TopCreator=()=>{
     return(
-        <ul className="listItem" >
+        <StyleTopCreator>
+         <ul className="listItem" >
               {listPerson}   
         </ul>
+        </StyleTopCreator>
+        
     
     )
 }
