@@ -57,19 +57,19 @@ const LayoutStyled = styled.div`
     padding:0;
   }
   .top-creator{
+    
     background-color: white;
     width: 400px;
-    height: 600px;
-    margin-top:50px;
-    margin-left:30px;
+    height: 500px;
+    margin-left:75px;
     border-radius:20px;
     .title{
       display: flex;
      justify-content: space-around;
-     align-items: center;
-   
+     align-items: center; 
     }
     .title h2{
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22");
 font-family: 'DM Sans';
 font-style: normal;
 font-weight: 700;
@@ -93,6 +93,7 @@ color: #27262E;
    width: 30%;
   }
   .name{
+    @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22");
   font-family: 'DM Sans';
 font-style: normal;
 font-weight: 700;
@@ -126,6 +127,7 @@ color: #747475;
 
   }
 .btn-follow{
+  @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22");
   border-radius:20px;
   background: rgba(84, 41, 255, 0.1);
   width: 77px;
@@ -171,7 +173,7 @@ border-radius: 30px;
     display: grid;
     grid-template-columns: auto auto ;
     gap:10px;
-    padding: 10px;
+    padding:10px;
   }
  
 

@@ -25,6 +25,7 @@ import { NavLink } from "react-router-dom";
 const SideBarStyled = styled.div`
   background-color: #ffffff ;
   padding: 32px;
+  position: fixed;
  
   .logo {
     display: flex;
