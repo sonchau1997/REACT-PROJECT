@@ -12,6 +12,8 @@ import Alisson from "assets/alisson.svg";
 import Erricson from "assets/erricson.svg";
 import { CardVideo } from "Component/CardVideo";
 import ApeInLove from "assets/apeinlove.svg";
+import SmillingApe from "assets/smilleape.svg";
+
 
 
 
@@ -42,19 +44,30 @@ const LayoutStyled = styled.div`
     margin-right:50px;
     flex-direction: column;
   }
+  .listItem{
+    display: flex;
+    flex-direction: column;
+    row-gap:20px;
+  }
   li{
-    list-style: decimal;
+    list-style: none;
+   
+  }
+  ul{
+    padding:0;
   }
   .top-creator{
     background-color: white;
-    width: 348px;
-    height: 478px;
+    width: 400px;
+    height: 600px;
     margin-top:50px;
     margin-left:30px;
     border-radius:20px;
     .title{
       display: flex;
-      justify-content: space-around;
+     justify-content: space-around;
+     align-items: center;
+   
     }
     .title h2{
 font-family: 'DM Sans';
@@ -72,6 +85,12 @@ color: #27262E;
     display: flex;
     justify-content:space-around;
     align-items: center;
+
+
+  }
+
+  .name-id{
+   width: 30%;
   }
   .name{
   font-family: 'DM Sans';
@@ -117,21 +136,39 @@ color: #747475;
   font-size: 12px;
   line-height: 16px;
   color: #5429FF;
+  border:none;
 
 
   }
   .title-trending{
     display: flex;
     justify-content: space-around;
-    justify-items:center;
+    align-items: center;
    
   }
   .category{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
  
    
   }
-  
+.art{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 45px;
+height: 28px;
+text-align: center;
+color: #5429FF;
+background: rgba(84, 41, 255, 0.1);
+border-radius: 30px;
 
+
+  }
+ 
+
+  
 `;
 
 const SideBarStyled = styled.div`
@@ -150,10 +187,15 @@ const fakeData = [
   { id: "@j_hawn", name: "Johan Hawn", avatar: Hawn },
   { id: "@m_alisson", name: "Maria Alisson", avatar: Alisson },
   { id: "@erricsonsam", name: "Sam Erricson", avatar: Erricson }
+
 ]
-const listPerson = fakeData.map((d) => <li key={d.number}>
+const listPerson = fakeData.map((d, index) => <li key={d.number}>
+
+
   <div className="item">
+    <div>{index + 1}.</div>
     <img src={d.avatar} alt="avatar" />
+
     <div className="name-id">
       <div className="name">
         {d.name}
@@ -189,33 +231,41 @@ const PrimaryLayout = ({ children }) => {
             <SideShow className="sideShow"></SideShow>
             <div className="title-trending">
               <h2>Trending Auctions</h2>
+              <div className="category">
+                <p className="art">Art</p>
+                <p>Music</p>
+                <p>Collectibles</p>
+                <p>Utility</p>
+              </div>
 
-              <p>Art</p>
-              <p>Music</p>
-              <p>Collectibles</p>
-              <p>Utility</p>
+
             </div>
-            <CardVideo title={"Ape In Love"} avatarAuthor={Tibao}video={ApeInLove}idAuthor={"@johnti60"}likes={"21.5k"}></CardVideo>
-            <CardVideo title={"Ape In Love"} avatarAuthor={Tibao}video={ApeInLove}idAuthor={"@johnti60"}likes={"21.5k"}></CardVideo>
-          
-          
-          
-            
+            <CardVideo title={"Ape In Love"} avatarAuthor={Tibao} video={ApeInLove} idAuthor={"@johnti60"} likes={"21.5k"}currentBid={"9.10"}></CardVideo>
+            <CardVideo title={"Smilling Ape"} avatarAuthor={Alisson} video={SmillingApe} idAuthor={"@m_alisson"} likes={"21.5k"} currentBid={"6.12"}></CardVideo>
+
+
+
+
 
 
           </div>
-     
+
           <div className="content-right">
             <ContentStyled>{children}</ContentStyled>
             <div className="top-creator">
               <div className="title">
                 <h2>Top Creator</h2>
-                <p>see more</p>
+                <p>see All</p>
               </div>
+          
 
-              <div >
+              <ul className="listItem" >
                 {listPerson}
-              </div>
+              </ul>
+
+            
+
+              
 
 
             </div>

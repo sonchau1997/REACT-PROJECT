@@ -54,8 +54,7 @@ const HeaderStyled = styled.div`
   .user-info {
     display: flex;
     gap: 24px;
-    width:30%;
-    margin-right:50px;
+    margin-right:110px;
   
   }
 
