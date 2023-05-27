@@ -2,18 +2,17 @@
 //import { Link } from "react-router-dom";
 import logo from "assets/logo.svg"
 import { styled } from "styled-components";
-import Dashboard from "assets/dashboard.svg";
-import Market from "assets/market.svg";
-import ActiveBids from "assets/activeBids.svg";
-import MyPortfolio from "assets/myPortfolio.svg";
-import Wallet from "assets/wallet.svg";
-import Favourites from "assets/favourites.svg"
-import History from "assets/history.svg";
-import Settings from "assets/setting.svg";
+import { ReactComponent as Dashboard } from "assets/dashboard.svg";
+import { ReactComponent as Market } from "assets/market.svg";
+import { ReactComponent as ActiveBids } from "assets/activeBids.svg";
+import { ReactComponent as MyPortfolio } from "assets/myPortfolio.svg";
+import { ReactComponent as Wallet } from "assets/wallet.svg";
+import { ReactComponent as Favourites } from "assets/favourites.svg"
+import { ReactComponent as History } from "assets/history.svg";
+import { ReactComponent as Settings } from "assets/setting.svg";
 import LightMode from "assets/lightMode.svg";
 import Day from "assets/day.svg";
 import Night from "assets/night.svg";
-//import { Button } from 'Component/Button';
 import ETH from "assets/Ethereum (ETH).svg";
 import ETH1 from "assets/Ethereum (ETH) (1).svg";
 import Add from "assets/add.svg";
@@ -136,6 +135,19 @@ const StyledNavItem = styled.div`
   a {
     text-decoration: unset;
     color: #7A797D;
+  }
+  .active {
+    svg {
+      path {
+        stroke: #f30ee4;
+      }  
+    }
+    color: #f30ee4;
+  }
+  .item-text {
+    position: absolute;
+    margin-left: 12px;
+    margin-top: 2px;
   }`
 
 const NavItem = ({ text, path, img }) => {
@@ -148,9 +160,9 @@ const NavItem = ({ text, path, img }) => {
 }
 export const CardSideBarItem = () => {
   return <StyledCard >
-    <div className="eth"> <img  src={ETH1} alt="eth" /></div>
-   
-    
+    <div className="eth"> <img src={ETH1} alt="eth" /></div>
+
+
     <div className='title'>
       Your Balance
     </div>
@@ -189,17 +201,61 @@ const SideBar = () => {
         </div>
       </div>
       <div className="navItem">
-        <NavItem img={Dashboard} text="Dashboard" path="/"></NavItem>
-        <NavItem img={Market} text="Market" path="/"></NavItem>
-        <NavItem img={ActiveBids} text=" ActiveBids" path="/"></NavItem>
-
+        <StyledNavItem>
+          <NavLink to="/">
+            <Dashboard />
+            <span className="item-text">Dashboard</span>
+          </NavLink>
+        </StyledNavItem>
+        <StyledNavItem>
+          <NavLink to="/market">
+            <Market />
+            <span className="item-text">Market</span>
+          </NavLink>
+        </StyledNavItem>
+        <StyledNavItem>
+          <NavLink to="/activeBids">
+            <ActiveBids />
+            <span className="item-text">ActiveBids</span>
+          </NavLink>
+        </StyledNavItem>
         <div className="profile">
           <h5>PROFILE</h5>
-          <NavItem img={MyPortfolio} text=" My Portfolio" path="/"></NavItem>
-          <NavItem img={Wallet} text=" Wallet" path="/"></NavItem>
-          <NavItem img={Favourites} text=" Favourites" path="/"></NavItem>
-          <NavItem img={History} text="History" path="/"></NavItem>
-          <NavItem img={Settings} text=" Settings" path="/"></NavItem>
+          <StyledNavItem>
+            <NavLink to="/myPortfolio">
+              <MyPortfolio />
+              <span className="item-text">MyPortfolio</span>
+            </NavLink>
+          </StyledNavItem>
+          <StyledNavItem>
+            <NavLink to="/wallet">
+              <Wallet />
+              <span className="item-text">Wallet</span>
+            </NavLink>
+
+          </StyledNavItem>
+          <StyledNavItem>
+            <NavLink to="/favourites">
+              < Favourites />
+              <span className="item-text"> Favourites</span>
+            </NavLink>
+
+          </StyledNavItem>
+          <StyledNavItem>
+            <NavLink to="/history">
+              < History />
+              <span className="item-text">History</span>
+            </NavLink>
+
+          </StyledNavItem>
+          <StyledNavItem>
+            <NavLink to="/setting">
+              < Settings />
+              <span className="item-text"> Setting</span>
+            </NavLink>
+
+          </StyledNavItem>
+
         </div>
 
 

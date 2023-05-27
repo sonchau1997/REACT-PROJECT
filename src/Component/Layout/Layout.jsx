@@ -139,7 +139,6 @@ const PrimaryLayout = ({ children }) => {
       <SideBarStyled >
         <SideBar></SideBar>
       </SideBarStyled>
-  
       <div className="right">
         <Header />
         <div className="content">
