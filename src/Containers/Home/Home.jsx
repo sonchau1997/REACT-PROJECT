@@ -1,4 +1,5 @@
 import { Card } from "Component/Card"
+import PrimaryLayout from "Component/Layout";
 import { styled } from "styled-components";
 const AppWrapper = styled.div`
   text-align: center;
@@ -47,10 +48,8 @@ const fakeData = [
 
  const Home=()=>{
     return(
-
-
-      
-      <AppWrapper>
+      <PrimaryLayout>
+         <AppWrapper>
       <header className="App-header">
     
         <div class="Card-container">
@@ -66,8 +65,9 @@ const fakeData = [
 
       </header>
     </AppWrapper>
-    
-  
+      </PrimaryLayout>
+
+
   
     )
  };
