@@ -8,7 +8,6 @@ import Home from 'Containers/Home';
 import Login from 'Containers/Login';
 import { Routes, Route } from "react-router-dom";
 import PageNotFound from 'Containers/404Page';
-import PrimaryLayout from 'Component/Layout';
 
 
 //import { styled } from 'styled-components';
@@ -49,14 +48,14 @@ function App() {
 
     //   </header>
     // </AppWrapper>
-    <PrimaryLayout>
-            <Routes>
+
+        <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/Login" element={<Login />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
-    </PrimaryLayout>
+    
 
 
 
