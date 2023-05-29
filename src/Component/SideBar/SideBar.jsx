@@ -48,6 +48,11 @@ const SideBarStyled = styled.div`
   .other{
     display: flex;
     justify-content:space-between;
+    .text{
+    position: absolute;
+    margin-left: 12px;
+    }
+  
   }
  
 `;
@@ -150,14 +155,7 @@ const StyledNavItem = styled.div`
     margin-top: 2px;
   }`
 
-const NavItem = ({ text, path, img }) => {
-  return (
-    <StyledNavItem>
-      <img src={img} alt="nav-icon"></img>
-      <NavLink to={path}>{text}</NavLink>
-    </StyledNavItem>
-  )
-}
+
 export const CardSideBarItem = () => {
   return <StyledCard >
     <div className="eth"> <img src={ETH1} alt="eth" /></div>
@@ -263,8 +261,8 @@ const SideBar = () => {
       <h5>OTHER</h5>
       <div className="other">
         <div>
-          <NavItem img={LightMode} text=" Light Mode" path="/">
-          </NavItem>
+          <img src={LightMode} alt="lightMode" />
+          <span className="text">Light Mode</span>
         </div>
 
         <div>
